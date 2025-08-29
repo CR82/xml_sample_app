@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/event"
+           xmlns:tns="http://example.com/event"
+           elementFormDefault="qualified">
+
+    <!-- Root element -->
+    <xs:element name="event" type="tns:EventType"/>
+    
+    <!-- Complex type definition -->
+    <xs:complexType name="EventType">
+        <xs:sequence>
+            <xs:element name="eventId" type="xs:long"/>
+            <xs:element name="eventName" type="xs:string"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="startDateTime" type="xs:dateTime"/>
+            <xs:element name="endDateTime" type="xs:dateTime"/>
+            <xs:element name="createdDate" type="xs:date"/>
+            <xs:element name="lastModified" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="isActive" type="xs:boolean" default="true"/>
+            <xs:element name="attendees" type="tns:AttendeesType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="version" type="xs:string" use="optional"/>
+    </xs:complexType>
+    
+    <!-- Attendees complex type -->
+    <xs:complexType name="AttendeesType">
+        <xs:sequence>
+            <xs:element name="attendee" type="tns:AttendeeType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Attendee complex type -->
+    <xs:complexType name="AttendeeType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="registrationTime" type="xs:dateTime"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

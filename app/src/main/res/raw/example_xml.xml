@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event>
+
+    <eventId>12345</eventId>
+    <eventName>Tech Conference 2025</eventName>
+    <description>Annual technology conference featuring AI, cloud computing, and mobile development</description>
+    <startDateTime>2025-09-15T09:00:00-07:00</startDateTime>
+    <endDateTime>2025-09-15T17:30:00-07:00</endDateTime>
+    <createdDate>2025-01-15</createdDate>
+    <lastModified>2025-08-29T14:30:00Z</lastModified>
+    <isActive>true</isActive>
+
+    <attendees>
+        <attendee>
+            <name>John Smith</name>
+            <email>john.smith@example.com</email>
+            <registrationTime>2025-08-01T10:15:30Z</registrationTime>
+        </attendee>
+        <attendee>
+            <name>Sarah Johnson</name>
+            <email>sarah.j@techcorp.com</email>
+            <registrationTime>2025-08-05T14:22:45Z</registrationTime>
+        </attendee>
+        <attendee>
+            <name>Michael Chen</name>
+            <email>m.chen@startup.io</email>
+            <registrationTime>2025-08-10T09:45:00Z</registrationTime>
+        </attendee>
+    </attendees>
+
+</event>
